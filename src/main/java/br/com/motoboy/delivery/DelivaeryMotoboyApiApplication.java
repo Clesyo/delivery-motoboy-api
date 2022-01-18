@@ -1,4 +1,4 @@
-package br.com.delivery.motoboy;
+package br.com.motoboy.delivery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
