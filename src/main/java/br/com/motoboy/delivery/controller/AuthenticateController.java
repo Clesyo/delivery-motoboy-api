@@ -22,17 +22,17 @@ public class AuthenticateController {
 
 	@Autowired
 	private AuthenticationService authenticationService;
-
+	
 	@PostMapping
 	public ResponseEntity<Object> auth(@RequestBody @Valid CredentialForm form, BindingResult result)
 			throws MethodArgumentNotValidException, NoSuchMethodException, SecurityException {
-
-		return authenticationService.authenticate(form);
+		
+		return authenticationService.authenticate(form); 
 	}
-
+	
 	@GetMapping("/me")
-	public ResponseEntity<Object> me(@RequestHeader String token) {
-
-		return authenticationService.me(token);
+	public ResponseEntity<Object> me(@RequestHeader String token){
+	
+		return  authenticationService.me(token);
 	}
 }

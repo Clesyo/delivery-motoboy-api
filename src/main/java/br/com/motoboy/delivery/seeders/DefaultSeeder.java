@@ -31,7 +31,7 @@ public class DefaultSeeder {
 			user.setEmail("admin@gmail.com");
 			user.setName("Admin User");
 			user.setPassword(new BCryptPasswordEncoder().encode("123456"));
-			roleRopositoty.findByName(ADMIN).ifPresent(role -> user.setRole(role));
+			roleRopositoty.findByName(ADMIN.name()).ifPresent(role -> user.setRole(role));
 			userRepository.save(user);
 			LOGGER.info("Default user created <<<");
 		}

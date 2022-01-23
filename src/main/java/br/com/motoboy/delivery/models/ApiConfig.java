@@ -1,21 +1,30 @@
 package br.com.motoboy.delivery.models;
 
-public class ApiConfig {
+import javax.persistence.Entity;
 
+@Entity
+public class ApiConfig extends BaseEntity {
+
+	private static final long serialVersionUID = 1L;
+	
 	private String jwtSecret;
+	
 	private Integer jwtExpirationInMinutes;
+
 	public String getJwtSecret() {
 		return jwtSecret;
 	}
+
 	public void setJwtSecret(String jwtSecret) {
 		this.jwtSecret = jwtSecret;
 	}
+
 	public Integer getJwtExpirationInMinutes() {
 		return jwtExpirationInMinutes;
 	}
+
 	public void setJwtExpirationInMinutes(Integer jwtExpirationInMinutes) {
 		this.jwtExpirationInMinutes = jwtExpirationInMinutes;
 	}
-	
-	
+
 }
