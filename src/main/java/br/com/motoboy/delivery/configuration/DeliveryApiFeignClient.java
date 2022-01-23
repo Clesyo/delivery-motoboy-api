@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import br.com.motoboy.delivery.models.Order;
 
 @Component
-@FeignClient(name = "delivery-api", url = "localhost:8001", path = "/order")
+@FeignClient(name = "delivery-api", path = "/order")
 public interface DeliveryApiFeignClient {
 
 	@GetMapping("/{id}")

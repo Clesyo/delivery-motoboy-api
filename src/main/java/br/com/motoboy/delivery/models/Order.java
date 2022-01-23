@@ -1,12 +1,14 @@
 package br.com.motoboy.delivery.models;
 
-import br.com.motoboy.delivery.enums.OrderStatus;
+import java.io.Serializable;
 
-public class Order {
+public class Order implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 
 	private Long id;
 
-	private OrderStatus status;
+	private String status;
 
 	public Long getId() {
 		return id;
@@ -16,12 +18,11 @@ public class Order {
 		this.id = id;
 	}
 
-	public OrderStatus getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(OrderStatus status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
-
 }
